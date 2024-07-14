@@ -70,14 +70,15 @@ body {
     width: 100%;
     gap: 16px;
   }
+
+  .cards {
+    padding: 0px;
+    margin: 0px;
+  }
 }
 
 @media (max-width: 768px) {
   .card-container {
     width: 100%;
-  }
-
-  .cards {
-    padding: 0px;
   }
 }
