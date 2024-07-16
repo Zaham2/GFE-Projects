@@ -1,5 +1,10 @@
 /* Put any custom CSS styles here.  */
 /* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
+
+:root {
+  --card-offset: 16px;
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
@@ -10,22 +15,78 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  background-color: lightgray;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.credits {
-  color: #777;
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  font-size: 11px;
-  text-align: center;
+
+.container {
+  padding-top: 120px;
+  height: 100%;
+  width: 100%;
 }
 
-.credits a {
-  color: #000;
-  font-weight: bold;
+.blog-card {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 340px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.img-class {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-content {
+  position: relative;
+  left: 16px;
+  padding-bottom: 16px;
+  padding-right: 24px;
+}
+
+.tag {
+  background-color: #bbf7d0;
+  border: 1px solid lightgreen;
+  display: inline-block;
+  width: fit-content;
+  border-radius: 30px;
+  padding: 8px;
+  font-weight: 500;
+}
+
+.heading {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.text {
+  white-space: wrap;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  width: 100%;
+}
+
+.btn {
+  border-style: none;
+  background-color: white;
+  color: #4f46e5;
+}
+
+.btn:hover {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    width: 100%;
+  }
+  
 }
