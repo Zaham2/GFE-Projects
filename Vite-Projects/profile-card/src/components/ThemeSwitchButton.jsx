@@ -9,8 +9,6 @@ const ThemeSwitchButton = () => {
     const { theme, toggleTheme } = React.useContext(ThemeContext)
 
     React.useEffect(() => {
-        console.log('ThemeSwitchButton theme:', theme)
-        console.log('ThemeSwitchButton current theme:', currentTheme)
         document.documentElement.setAttribute(
             "data-theme",
             theme
@@ -23,11 +21,11 @@ const ThemeSwitchButton = () => {
     }
 
     return (
-        <>
-            <button onClick={() => handleThemeChange(THEMES.LIGHT)}>LIGHT</button>
-            <button onClick={() => handleThemeChange(THEMES.DARK)}>DARK</button>
-            <button onClick={() => handleThemeChange(THEMES.GRAY)}>GRAY</button>
-        </>
+        <div className='theme-btn-container'>
+            <button className='theme-btn' onClick={() => handleThemeChange(THEMES.LIGHT)}>LIGHT</button>
+            <button className='theme-btn' onClick={() => handleThemeChange(THEMES.DARK)}>DARK</button>
+            <button className='theme-btn' onClick={() => handleThemeChange(THEMES.GRAY)}>GRAY</button>
+        </div>
     )
 }
 
